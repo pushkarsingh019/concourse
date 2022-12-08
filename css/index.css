@@ -345,12 +345,6 @@
   margin-bottom: 115px;
 }
 
-.event-component:nth-child(even){
-  display: grid;
-  direction: rtl;
-  column-gap: 2.5rem;
-}
-
 .event-component h2,h4 {
   color: white;
 }
@@ -370,12 +364,21 @@
   font-size: 3rem;
 }
 
-.event-image {
+.event-image-main {
   text-align: right;
   border-radius: 41px;
 }
 
-.event-image .image {
+.event-image-main .image {
+  border-radius: 41px;
+}
+
+.event-image-alternate {
+  text-align: left;
+  border-radius: 41px;
+}
+
+.event-image-alternate .image {
   border-radius: 41px;
 }
 

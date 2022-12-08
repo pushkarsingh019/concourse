@@ -13,6 +13,7 @@ const eventSchema = {
 
 const eventsData = [
     {
+      id:1,
       day: "Day One",
       name: "Introduction to JavaScript",
       subtitle: "Learn the basics of JavaScript",
@@ -24,6 +25,7 @@ const eventsData = [
       formLink: "https://docs.new"
     },
     {
+      id : 2,
       day: "Day Two",
       name: "JavaScript Functions",
       subtitle: "Master the use of functions in JavaScript",
@@ -35,6 +37,7 @@ const eventsData = [
       formLink: "https://docs.new"
     },
     {
+      id : 3,  
       day: "Day Three",
       name: "JavaScript Objects and Arrays",
       subtitle: "Learn about objects and arrays in JavaScript",
@@ -46,6 +49,7 @@ const eventsData = [
       formLink: "https://docs.new"
     },
     {
+      id : 4,  
       day: "Day Four",
       name: "JavaScript DOM Manipulation",
       subtitle: "Learn how to manipulate the web page with JavaScript",
@@ -57,6 +61,7 @@ const eventsData = [
       formLink: "https://docs.new"
     },
     {
+      id : 5,  
       day: "Day Five",
       name: "JavaScript Event Handling",
       subtitle: "Learn how to handle events in JavaScript",
@@ -68,6 +73,7 @@ const eventsData = [
       formLink: "https://docs.new"
     },
     {
+      id : 6,  
       day: "Day Six",
       name: "Advanced JavaScript Techniques",
       subtitle: "Learn advanced techniques for writing JavaScript code",

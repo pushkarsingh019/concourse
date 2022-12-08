@@ -1,9 +1,14 @@
 import Button from "./Button"
 import Image from "next/image";
 import dummyImage from "../public/dummyEvent.jpeg"
-function EventComponent({eventName, eventSubtitle, eventDescription, eventTime, eventVenue, eventNumber, eventHead, eventLink, eventImage}){
+
+
+function AlternateEventComponent({eventName, eventSubtitle, eventDescription, eventTime, eventVenue, eventNumber, eventHead, eventLink, eventImage}){
     return(
         <div className="event-component">
+            <div className="event-image-alternate">
+            <Image className="image" src={dummyImage} alt="dummy image" height={262} width={454} />
+            </div>
             <div className="event-details">
                 <h2>{eventName}</h2>
                 <h4>{eventSubtitle}</h4>
@@ -19,11 +24,8 @@ function EventComponent({eventName, eventSubtitle, eventDescription, eventTime, 
                     <Button text={`Register Now`} redirect={eventLink} type="button" />
                 </div>
             </div>
-            <div className="event-image-main">
-            <Image className="image" src={dummyImage} alt="dummy image" height={262} width={454} />
-            </div>
         </div>
     )
 };
 
-export default EventComponent;
+export default AlternateEventComponent;

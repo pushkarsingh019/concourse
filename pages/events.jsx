@@ -7,14 +7,24 @@ import SocialSection from "../components/SocialSection";
 import FadeIn from "react-fade-in/lib/FadeIn";
 
 import Head from "next/head";
+import { useState } from "react";
+import AlternateEventComponent from "../components/AlternateEventComponent";
 
 function EventsSection(){
+
     return(
        <section className="events-section">
              {eventsData.map((event) => {
-            return(
-                <EventComponent key={event.name} eventName={event.name} eventSubtitle={event.subtitle} eventDescription={event.description} eventTime={event.time} eventVenue={event.venue} eventNumber={event.contactNumber} eventHead={event.contactName} eventLink={event.formLink} />
-            )
+                if(event.id % 2 === 0){
+                    return(
+                        <AlternateEventComponent key={event.name} eventName={event.name} eventSubtitle={event.subtitle} eventDescription={event.description} eventTime={event.time} eventVenue={event.venue} eventNumber={event.contactNumber} eventHead={event.contactName} eventLink={event.formLink} />
+                    )
+                }
+                else {
+                    return(
+                        <EventComponent key={event.name} eventName={event.name} eventSubtitle={event.subtitle} eventDescription={event.description} eventTime={event.time} eventVenue={event.venue} eventNumber={event.contactNumber} eventHead={event.contactName} eventLink={event.formLink} />
+                    )
+                }
         })}
        </section>
     )
