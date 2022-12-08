@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
+    scroll-behavior: smooth;
 }
 
 /* DESIGN SYSTEM */
@@ -21,13 +22,31 @@
   }
   
   /* FONTS */
-  
+
   body {
+    background-color: #000000;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: var(--primary-color);
-  }
+  } */
   
   h1 {
     font-family: 'Zen Dots', cursive;
@@ -45,12 +64,23 @@
     padding: 100px 30px;
     color: var(--primary-color);
     text-align: center;
+    
   }
   
+  .screen {
+    scroll-snap-type: y mandatory;
+  }
+
   .container h2 {
     font-size: 1.7rem;
   }
 
+  .subtitle {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+  }
   /* BUTTONS */
   
   .button {
@@ -111,6 +141,9 @@
   background-image: linear-gradient(to right, #f42e87, #2972c2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: larger;
+  margin-bottom: 0;
+  padding: 0px;
 }
 
 
@@ -119,10 +152,11 @@
   text-align: center;
   background-color: var(--primary-color);
   color: white;
+  scroll-snap-align: start;
 }
 
 .hero-section h1 {
-  font-size: 4.5rem;
+  font-size: 40px;
   letter-spacing: 10px;
 }
 
@@ -140,6 +174,7 @@
   text-align: center;
   background-color: var(--primary-color);
   color: white;
+  scroll-snap-align: start;
 }
 
 .explore-section h2 {
@@ -181,6 +216,7 @@
   padding: 100px 30px;
   background-color: var(--primary-color);
   color: white;
+  scroll-snap-align: start;
 }
 
 .what-section h2{
@@ -202,6 +238,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  scroll-snap-align: start;
 }
 
 .organised-by h3 {
@@ -214,8 +251,8 @@
 }
 
 .img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   background-color: white;
 }
@@ -226,6 +263,7 @@
   background-color: var(--primary-color);
   color: white;
   text-align: center;
+  scroll-snap-align: start;
 }
 
 .sponsor-section h2 {
@@ -294,14 +332,23 @@
 .events-section {
   background-color: var(--primary-color);
   color: white;
+  padding: 50px 30px;
 }
 
 .event-component {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 25px 30px;
-  column-gap: 2.5rem;
+  column-gap: 1rem;
+  row-gap: 2.5rem;
   color: white;
+  margin-bottom: 115px;
+}
+
+.event-component:nth-child(even){
+  display: grid;
+  direction: rtl;
+  column-gap: 2.5rem;
 }
 
 .event-component h2,h4 {
@@ -315,10 +362,29 @@
 
 }
 
-.event-image {
-  border: 1px solid red;
+.screen h1 {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 50px 30px;
+  font-size: 3rem;
 }
 
+.event-image {
+  text-align: right;
+  border-radius: 41px;
+}
+
+.event-image .image {
+  border-radius: 41px;
+}
+
+.contact-section {
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
 /* responsive */
 @media (max-width: 700px) {
   .navbar {

@@ -1,10 +1,15 @@
 import Navbar from "../components/Navbar";
 
+import Head from "next/head";
+
 function AboutScreen(){
     return(
         <div className="screen">
             <Navbar />
-            <h1>About</h1>
+            <Head>
+                <title>Concourse 2023 | About</title>
+            </Head>
+            <h1>About us</h1>
         </div>
     )
 };

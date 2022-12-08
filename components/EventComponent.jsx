@@ -1,7 +1,6 @@
 import Button from "./Button"
 import Image from "next/image";
-
-
+import dummyImage from "../public/dummyEvent.jpeg"
 function EventComponent({eventName, eventSubtitle, eventDescription, eventTime, eventVenue, eventNumber, eventHead, eventLink, eventImage}){
     return(
         <div className="event-component">
@@ -21,7 +20,7 @@ function EventComponent({eventName, eventSubtitle, eventDescription, eventTime, 
                 </div>
             </div>
             <div className="event-image">
-
+            <Image className="image" src={dummyImage} alt="dummy image" height={262} width={454} />
             </div>
         </div>
     )
